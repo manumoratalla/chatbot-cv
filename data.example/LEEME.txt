@@ -1,0 +1,21 @@
+DATOS DE EJEMPLO
+================
+
+Esta carpeta contiene un perfil INVENTADO (Ana García López) para que
+cualquiera pueda probar el proyecto sin usar datos reales.
+
+Los datos reales del asistente están en la carpeta data/, que no se sube
+a GitHub (está en el .gitignore).
+
+Para probar el proyecto con estos datos de ejemplo:
+  1. Copia esta carpeta y llama a la copia "data"
+  2. Ejecuta: npm run index
+  3. Ejecuta: npm run dev
+
+Formato de los documentos:
+  - Un archivo .md por tema (perfil, formación, proyectos...).
+  - "# Título" al principio: el título del documento.
+  - "## Sección": cada sección se convierte en un fragmento del índice.
+    Escribe cada sección para que se entienda sola, en tercera persona.
+  - El texto que haya antes de la primera "## " se ignora.
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asistente virtual de Manuel Moratalla</title>
+  <meta name="description" content="Asistente virtual que resuelve dudas sobre el perfil profesional de Manuel Moratalla González.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="botid.js"></script>
+  <script src="chat.js" defer></script>
+</head>
+<body>
+  <main class="chat">
+    <header class="chat__header">
+      <div>
+        <h1>Asistente virtual de Manuel</h1>
+        <p>Resuelve tus dudas sobre su perfil profesional.</p>
+      </div>
+      <nav class="chat__links" aria-label="Más sobre Manuel">
+        <a href="https://manuelmoratalla.vercel.app">Web</a>
+        <a href="https://www.linkedin.com/in/manuel-moratalla-gonzalez" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </header>
+
+    <!-- role="log" y aria-live: los lectores de pantalla leen los mensajes nuevos -->
+    <div id="messages" class="chat__messages" role="log" aria-live="polite"></div>
+
+    <form id="chat-form" class="chat__form">
+      <!-- maxlength coincide con MAX_MESSAGE_LENGTH de lib/config.js; el servidor lo vuelve a comprobar -->
+      <input
+        id="message-input"
+        class="chat__input"
+        type="text"
+        placeholder="Escribe tu pregunta…"
+        maxlength="500"
+        autocomplete="off"
+        aria-label="Tu pregunta"
+        required
+      >
+      <button id="send-button" class="chat__button" type="submit">Enviar</button>
+    </form>
+    <p class="chat__note">No escribas datos personales: las preguntas se envían a OpenAI para generar la respuesta. <a href="privacidad.html">Privacidad</a></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!--
+  Fondo del chatbot: el asistente virtual de Manuel en su oficina.
+  Dibujado a mano en SVG (formas, no píxeles): pesa poco y se ve nítido a cualquier tamaño.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6edf4"/>
+      <stop offset="1" stop-color="#d2dce7"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#78c1f1"/>
+      <stop offset="1" stop-color="#c6e9fb"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c69a6c"/>
+      <stop offset="1" stop-color="#a77a4f"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#0f1d45"/>
+    </linearGradient>
+    <clipPath id="window-clip">
+      <rect x="160" y="100" width="460" height="440" rx="10"/>
+    </clipPath>
+    <pattern id="lights" width="18" height="22" patternUnits="userSpaceOnUse">
+      <rect x="5" y="6" width="7" height="9" fill="#e3f1fc" opacity="0.75"/>
+    </pattern>
+  </defs>
+
+  <!-- ───────────── Habitación ───────────── -->
+  <!-- Pared -->
+  <rect width="1600" height="700" fill="url(#wall)"/>
+  <!-- Suelo de madera -->
+  <rect y="700" width="1600" height="200" fill="url(#floor)"/>
+  <g stroke="#9c6f45" stroke-width="3" opacity="0.55">
+    <line x1="0" y1="748" x2="1600" y2="748"/>
+    <line x1="0" y1="800" x2="1600" y2="800"/>
+    <line x1="0" y1="856" x2="1600" y2="856"/>
+    <line x1="240" y1="704" x2="240" y2="748"/>
+    <line x1="760" y1="704" x2="760" y2="748"/>
+    <line x1="1280" y1="704" x2="1280" y2="748"/>
+    <line x1="80" y1="748" x2="80" y2="800"/>
+    <line x1="560" y1="748" x2="560" y2="800"/>
+    <line x1="1060" y1="748" x2="1060" y2="800"/>
+    <line x1="1480" y1="748" x2="1480" y2="800"/>
+    <line x1="330" y1="800" x2="330" y2="856"/>
+    <line x1="850" y1="800" x2="850" y2="856"/>
+    <line x1="1380" y1="800" x2="1380" y2="856"/>
+  </g>
+  <!-- Rodapié -->
+  <rect x="-10" y="686" width="1620" height="18" fill="#f5f2ec" stroke="#3b2416" stroke-width="4"/>
+
+  <!-- Ventana con la ciudad -->
+  <rect x="160" y="100" width="460" height="440" rx="10" fill="url(#glass)"/>
+  <g clip-path="url(#window-clip)">
+    <g fill="#ffffff" opacity="0.8">
+      <ellipse cx="270" cy="170" rx="56" ry="15"/>
+      <ellipse cx="300" cy="158" rx="32" ry="15"/>
+      <ellipse cx="520" cy="215" rx="44" ry="12"/>
+    </g>
+    <!-- Edificios lejanos -->
+    <g fill="#a3cbec">
+      <rect x="168" y="380" width="58" height="160"/>
+      <rect x="232" y="330" width="54" height="210"/>
+      <rect x="292" y="400" width="68" height="140"/>
+      <rect x="366" y="300" width="50" height="240"/>
+      <rect x="422" y="360" width="78" height="180"/>
+      <rect x="506" y="320" width="50" height="220"/>
+      <rect x="562" y="390" width="58" height="150"/>
+    </g>
+    <!-- Edificios cercanos (con ventanas iluminadas) -->
+    <g fill="#6f9fcf">
+      <rect x="160" y="450" width="80" height="90"/>
+      <rect x="248" y="420" width="62" height="120"/>
+      <rect x="318" y="470" width="90" height="70"/>
+      <rect x="416" y="430" width="70" height="110"/>
+      <rect x="494" y="460" width="70" height="80"/>
+      <rect x="572" y="440" width="48" height="100"/>
+    </g>
+    <g fill="url(#lights)">
+      <rect x="160" y="450" width="80" height="90"/>
+      <rect x="248" y="420" width="62" height="120"/>
+      <rect x="318" y="470" width="90" height="70"/>
+      <rect x="416" y="430" width="70" height="110"/>
+      <rect x="494" y="460" width="70" height="80"/>
+      <rect x="572" y="440" width="48" height="100"/>
+    </g>
+  </g>
+  <!-- Marco de la ventana -->
+  <rect x="160" y="100" width="460" height="440" rx="10" fill="none" stroke="#f7f6f2" stroke-width="16"/>
+  <line x1="390" y1="100" x2="390" y2="540" stroke="#f7f6f2" stroke-width="12"/>
+  <line x1="160" y1="320" x2="620" y2="320" stroke="#f7f6f2" stroke-width="12"/>
+  <rect x="152" y="92" width="476" height="456" rx="14" fill="none" stroke="#3b2416" stroke-width="5"/>
+  <rect x="140" y="540" width="500" height="20" rx="5" fill="#f7f6f2" stroke="#3b2416" stroke-width="5"/>
+
+  <!-- Cuadro con </> -->
+  <rect x="660" y="220" width="120" height="96" rx="6" fill="#1f2937" stroke="#3b2416" stroke-width="5"/>
+  <rect x="672" y="232" width="96" height="72" rx="3" fill="#0f172a"/>
+  <text x="720" y="281" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="34" font-weight="700" fill="#60a5fa">&lt;/&gt;</text>
+
+  <!-- Estantería (a la derecha, queda detrás del chat en pantallas pequeñas) -->
+  <g stroke="#3b2416" stroke-width="5" stroke-linejoin="round">
+    <rect x="1090" y="250" width="360" height="438" rx="6" fill="#b07d4a"/>
+    <rect x="1106" y="266" width="328" height="406" fill="#8f6238"/>
+    <line x1="1106" y1="402" x2="1434" y2="402"/>
+    <line x1="1106" y1="538" x2="1434" y2="538"/>
+    <g stroke-width="3">
+      <rect x="1122" y="306" width="26" height="96" fill="#2c4a7c"/>
+      <rect x="1150" y="320" width="22" height="82" fill="#d23a33"/>
+      <rect x="1174" y="296" width="30" height="106" fill="#f2c14e"/>
+      <rect x="1206" y="316" width="24" height="86" fill="#5cb048"/>
+      <rect x="1300" y="330" width="80" height="72" fill="#e8e2d6"/>
+      <rect x="1124" y="448" width="28" height="90" fill="#5cb048"/>
+      <rect x="1154" y="462" width="24" height="76" fill="#2c4a7c"/>
+      <rect x="1250" y="440" width="30" height="98" fill="#d23a33"/>
+      <rect x="1282" y="456" width="26" height="82" fill="#f2c14e"/>
+      <rect x="1360" y="470" width="56" height="68" fill="#e8e2d6"/>
+      <rect x="1130" y="590" width="80" height="82" fill="#e8e2d6"/>
+      <rect x="1300" y="580" width="28" height="92" fill="#2c4a7c"/>
+      <rect x="1330" y="596" width="24" height="76" fill="#5cb048"/>
+    </g>
+  </g>
+
+  <!-- Planta (izquierda) -->
+  <g stroke="#3b2416" stroke-width="4" stroke-linejoin="round">
+    <path d="M110 640 C 64 566 54 506 72 446 C 102 506 116 566 112 640 Z" fill="#4c9a3a"/>
+    <path d="M112 640 C 122 562 150 504 190 474 C 182 544 150 602 116 640 Z" fill="#5cb048"/>
+    <path d="M108 642 C 86 586 42 566 18 546 C 38 604 70 632 106 646 Z" fill="#5cb048"/>
+    <path d="M116 642 C 134 592 180 580 206 560 C 192 612 152 636 118 648 Z" fill="#4c9a3a"/>
+    <path d="M60 642 L 166 642 L 152 762 L 74 762 Z" fill="#e8e2d6" stroke-width="5"/>
+    <rect x="52" y="630" width="122" height="22" rx="6" fill="#f3eee5" stroke-width="5"/>
+  </g>
+
+  <!-- Mesa con ordenador -->
+  <g stroke="#3b2416" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="582" y="612" width="16" height="150" fill="#3a302b" stroke-width="4"/>
+    <rect x="836" y="612" width="16" height="150" fill="#3a302b" stroke-width="4"/>
+    <rect x="560" y="596" width="314" height="22" rx="5" fill="#a8743f" stroke-width="5"/>
+    <!-- Monitor -->
+    <rect x="672" y="560" width="16" height="36" fill="#4b5262" stroke-width="3.5"/>
+    <ellipse cx="680" cy="596" rx="34" ry="6" fill="#4b5262" stroke-width="3.5"/>
+    <rect x="600" y="462" width="160" height="104" rx="8" fill="#2b2f38" stroke-width="5"/>
+    <rect x="612" y="474" width="136" height="80" rx="3" fill="url(#screen)"/>
+    <g stroke="none">
+      <rect x="622" y="486" width="46" height="6" rx="3" fill="#93c5fd"/>
+      <rect x="632" y="498" width="70" height="6" rx="3" fill="#fde68a"/>
+      <rect x="632" y="510" width="52" height="6" rx="3" fill="#86efac"/>
+      <rect x="642" y="522" width="64" height="6" rx="3" fill="#93c5fd"/>
+      <rect x="632" y="534" width="40" height="6" rx="3" fill="#f9a8d4"/>
+    </g>
+    <!-- Taza de café -->
+    <rect x="774" y="562" width="32" height="34" rx="5" fill="#ffffff" stroke-width="4"/>
+    <path d="M806 570 q 15 5 0 18" fill="none" stroke-width="4"/>
+    <path d="M784 552 q -7 -10 2 -20" fill="none" stroke="#9aa3ad" stroke-width="3"/>
+    <path d="M796 552 q -7 -10 2 -20" fill="none" stroke="#9aa3ad" stroke-width="3"/>
+    <!-- Libros -->
+    <rect x="818" y="582" width="48" height="14" rx="2" fill="#d23a33" stroke-width="3.5"/>
+    <rect x="822" y="568" width="42" height="14" rx="2" fill="#2c4a7c" stroke-width="3.5"/>
+  </g>
+
+  <!-- ───────────── Personaje ───────────── -->
+  <g transform="translate(400 768) scale(0.9)" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Sombra -->
+    <ellipse cx="0" cy="4" rx="120" ry="16" fill="#000" opacity="0.15"/>
+
+    <!-- Zapatos -->
+    <ellipse cx="-36" cy="-12" rx="34" ry="15" fill="#1d1e26" stroke="#3b2416" stroke-width="5"/>
+    <ellipse cx="36" cy="-12" rx="34" ry="15" fill="#1d1e26" stroke="#3b2416" stroke-width="5"/>
+
+    <!-- Pantalones -->
+    <path d="M-62 -160 L -14 -160 L -12 -20 L -58 -20 Z" fill="#253f6a" stroke="#3b2416" stroke-width="5"/>
+    <path d="M14 -160 L 62 -160 L 58 -20 L 12 -20 Z" fill="#253f6a" stroke="#3b2416" stroke-width="5"/>
+
+    <!-- Cuello -->
+    <rect x="-17" y="-352" width="34" height="34" rx="6" fill="#f5c49c" stroke="#3b2416" stroke-width="5"/>
+
+    <!-- Chaqueta -->
+    <path d="M-80 -318 C -92 -262 -84 -200 -72 -148 L 72 -148 C 84 -200 92 -262 80 -318 C 50 -336 -50 -336 -80 -318 Z" fill="#2c4a7c" stroke="#3b2416" stroke-width="5"/>
+    <!-- Camisa -->
+    <path d="M-30 -328 L 30 -328 L 0 -234 Z" fill="#ffffff" stroke="#3b2416" stroke-width="4"/>
+    <!-- Corbata -->
+    <path d="M-7 -306 L 7 -306 L 13 -258 L 0 -242 L -13 -258 Z" fill="#d23a33" stroke="#3b2416" stroke-width="3.5"/>
+    <path d="M-11 -326 L 11 -326 L 7 -306 L -7 -306 Z" fill="#b92f29" stroke="#3b2416" stroke-width="3.5"/>
+    <!-- Cuello de la camisa -->
+    <path d="M-30 -330 L -4 -324 L -20 -306 Z" fill="#ffffff" stroke="#3b2416" stroke-width="3.5"/>
+    <path d="M30 -330 L 4 -324 L 20 -306 Z" fill="#ffffff" stroke="#3b2416" stroke-width="3.5"/>
+    <!-- Solapas -->
+    <path d="M-34 -330 L -4 -236 L -28 -262 L -54 -302 Z" fill="#21395f" stroke="#3b2416" stroke-width="4"/>
+    <path d="M34 -330 L 4 -236 L 28 -262 L 54 -302 Z" fill="#21395f" stroke="#3b2416" stroke-width="4"/>
+    <!-- Botones y bolsillo con pañuelo -->
+    <circle cx="0" cy="-214" r="5.5" fill="#152642"/>
+    <circle cx="0" cy="-184" r="5.5" fill="#152642"/>
+    <path d="M44 -278 L 66 -280 L 62 -265 L 47 -264 Z" fill="#ffffff" stroke="#3b2416" stroke-width="3"/>
+    <path d="M40 -263 L 70 -265" fill="none" stroke="#3b2416" stroke-width="3.5"/>
+
+    <!-- Brazo derecho (mano en la cadera) -->
+    <path d="M66 -306 C 112 -292 124 -240 106 -214 C 98 -202 84 -194 72 -192" fill="none" stroke="#3b2416" stroke-width="44"/>
+    <path d="M66 -306 C 112 -292 124 -240 106 -214 C 98 -202 84 -194 72 -192" fill="none" stroke="#2c4a7c" stroke-width="34"/>
+    <circle cx="70" cy="-191" r="17" fill="#f5c49c" stroke="#3b2416" stroke-width="5"/>
+
+    <!-- Brazo izquierdo (lleva el maletín) -->
+    <path d="M-66 -306 C -98 -280 -106 -232 -101 -186" fill="none" stroke="#3b2416" stroke-width="44"/>
+    <path d="M-66 -306 C -98 -280 -106 -232 -101 -186" fill="none" stroke="#2c4a7c" stroke-width="34"/>
+
+    <!-- Maletín -->
+    <path d="M-122 -150 L -122 -166 Q -122 -180 -108 -180 L -92 -180 Q -78 -180 -78 -166 L -78 -150" fill="none" stroke="#5b3a1c" stroke-width="8"/>
+    <rect x="-160" y="-152" width="120" height="88" rx="12" fill="#9c6b3c" stroke="#3b2416" stroke-width="5"/>
+    <path d="M-160 -124 L -40 -124" fill="none" stroke="#3b2416" stroke-width="4"/>
+    <rect x="-108" y="-132" width="16" height="13" rx="3" fill="#f2c14e" stroke="#3b2416" stroke-width="3"/>
+    <circle cx="-100" cy="-174" r="17" fill="#f5c49c" stroke="#3b2416" stroke-width="5"/>
+
+    <!-- Cabeza -->
+    <circle cx="-104" cy="-440" r="20" fill="#f5c49c" stroke="#3b2416" stroke-width="5"/>
+    <circle cx="104" cy="-440" r="20" fill="#f5c49c" stroke="#3b2416" stroke-width="5"/>
+    <ellipse cx="0" cy="-450" rx="104" ry="100" fill="#f5c49c" stroke="#3b2416" stroke-width="5"/>
+
+    <!-- Pelo -->
+    <path d="M-106 -432 C -124 -525 -62 -585 10 -582 C 88 -580 132 -520 108 -432 C 100 -462 92 -478 80 -488 C 58 -506 20 -506 -12 -490 C -40 -478 -72 -480 -94 -466 C -100 -456 -104 -446 -106 -432 Z" fill="#8a4b22" stroke="#3b2416" stroke-width="5"/>
+    <path d="M-6 -580 C 4 -608 38 -612 50 -594 C 36 -596 20 -592 12 -582 Z" fill="#8a4b22" stroke="#3b2416" stroke-width="5"/>
+    <path d="M72 -522 C 40 -532 0 -526 -34 -508" fill="none" stroke="#6e3a18" stroke-width="4"/>
+    <path d="M30 -560 C 60 -556 84 -538 96 -512" fill="none" stroke="#b0652f" stroke-width="8" opacity="0.8"/>
+
+    <!-- Cara -->
+    <path d="M-58 -470 Q -40 -480 -20 -472" fill="none" stroke="#3b2416" stroke-width="5"/>
+    <path d="M20 -472 Q 40 -480 58 -470" fill="none" stroke="#3b2416" stroke-width="5"/>
+    <ellipse cx="-38" cy="-436" rx="12" ry="18" fill="#1b1b1b"/>
+    <ellipse cx="38" cy="-436" rx="12" ry="18" fill="#1b1b1b"/>
+    <circle cx="-33" cy="-444" r="4.5" fill="#ffffff"/>
+    <circle cx="43" cy="-444" r="4.5" fill="#ffffff"/>
+    <ellipse cx="-68" cy="-402" rx="14" ry="7" fill="#f08c7e" opacity="0.55"/>
+    <ellipse cx="68" cy="-402" rx="14" ry="7" fill="#f08c7e" opacity="0.55"/>
+    <path d="M-4 -414 Q 5 -407 -2 -400" fill="none" stroke="#c98a6a" stroke-width="4"/>
+    <path d="M-24 -386 Q 2 -370 26 -390" fill="none" stroke="#5a2e1a" stroke-width="5"/>
+
+    <!-- Gafas -->
+    <g fill="none" stroke="#2a211c" stroke-width="5">
+      <rect x="-68" y="-460" width="58" height="46" rx="16" fill="#ffffff" fill-opacity="0.15"/>
+      <rect x="10" y="-460" width="58" height="46" rx="16" fill="#ffffff" fill-opacity="0.15"/>
+      <path d="M-10 -442 Q 0 -450 10 -442"/>
+      <path d="M-68 -444 L -100 -450"/>
+      <path d="M68 -444 L 100 -450"/>
+    </g>
+    <path d="M-56 -452 L -48 -456" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.7"/>
+    <path d="M22 -452 L 30 -456" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.7"/>
+  </g>
+</svg>

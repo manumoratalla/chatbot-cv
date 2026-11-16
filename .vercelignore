@@ -1,0 +1,10 @@
+# Archivos que la CLI de Vercel no sube (no lee el .gitignore).
+# node_modules/ y .vercel/ ya los ignora por su cuenta.
+
+# Secretos: en Vercel las variables se configuran en el proyecto
+.env
+.env.*
+
+# Documentos de partida: en producción solo hace falta el índice ya generado
+data/
+data.example/

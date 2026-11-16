@@ -1,0 +1,231 @@
+/* Estilos del chat y de la página de privacidad.
+   Clases con BEM: bloque (.chat), elemento (.chat__input) y variante (.message--user). */
+
+:root {
+  color-scheme: dark;
+  --bg: #0b1220;
+  --panel: #111a2e;
+  --border: #1f2a44;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --accent: #2563eb;       /* texto blanco encima: contraste 5,2:1 (WCAG AA) */
+  --accent-hover: #1d4ed8;
+  --user-bg: #1d4ed8;
+  --bot-bg: #1e293b;
+  --error: #f87171;
+  --link: #93c5fd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* La ilustración se ancla abajo a la izquierda, donde está el personaje,
+   para que no se recorte; el chat va a la derecha. */
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg) url('img/fondo-oficina.svg') left bottom / cover no-repeat;
+  color: var(--text);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* En pantallas medianas ocupa como mucho la mitad, para no tapar al personaje. */
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: min(560px, 48vw);
+  height: min(860px, calc(100dvh - 64px));
+  margin: 32px 6vw 32px 0;
+  padding: 16px;
+  background: rgba(11, 18, 32, 0.9);
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+/* En pantallas estrechas no caben el personaje y el chat: el chat ocupa todo. */
+@media (max-width: 900px) {
+  body {
+    justify-content: center;
+  }
+
+  .chat {
+    max-width: none;
+    height: 100dvh;
+    margin: 0;
+    border-radius: 0;
+    background: rgba(11, 18, 32, 0.94);
+    backdrop-filter: none; /* con esta opacidad apenas se ve el fondo */
+  }
+}
+
+.chat__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.chat__header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.chat__header p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.chat__links {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.chat__links a {
+  padding: 5px 11px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.chat__links a:hover,
+.chat__links a:focus-visible {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+.chat__messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.message {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  line-height: 1.45;
+  white-space: pre-wrap;    /* respeta los saltos de línea de las respuestas */
+  overflow-wrap: anywhere;  /* corta palabras o enlaces muy largos */
+}
+
+.message--user {
+  align-self: flex-end;
+  background: var(--user-bg);
+  border-bottom-right-radius: 4px;
+}
+
+.message--bot {
+  align-self: flex-start;
+  background: var(--bot-bg);
+  border-bottom-left-radius: 4px;
+}
+
+.message--error {
+  align-self: flex-start;
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+
+.message--typing {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.chat__form {
+  display: flex;
+  gap: 8px;
+}
+
+.chat__input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--text);
+  font: inherit;
+}
+
+.chat__input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.chat__button {
+  padding: 0 18px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chat__button:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.chat__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.chat__note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.chat__note a {
+  color: inherit;
+}
+
+/* Página de privacidad */
+.legal-page {
+  display: block;
+  background: var(--bg);
+}
+
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+  line-height: 1.65;
+}
+
+.legal h1 {
+  font-size: 1.6rem;
+}
+
+.legal h2 {
+  margin-top: 32px;
+  font-size: 1.1rem;
+}
+
+.legal a {
+  color: var(--link);
+}
+
+.legal__meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}

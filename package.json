@@ -1,0 +1,26 @@
+{
+  "name": "chatbot-cv",
+  "version": "0.2.0",
+  "description": "Asistente virtual con RAG sobre el perfil profesional de Manuel Moratalla González",
+  "author": "Manuel Moratalla González",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "node --watch --env-file-if-exists=.env server.js",
+    "start": "node --env-file-if-exists=.env server.js",
+    "index": "node --env-file-if-exists=.env scripts/build-index.js",
+    "index:preview": "node scripts/build-index.js --preview",
+    "ask": "node --env-file-if-exists=.env scripts/ask.js"
+  },
+  "dependencies": {
+    "@upstash/ratelimit": "^2.2.1",
+    "@upstash/redis": "^1.41.0",
+    "botid": "1.5.13",
+    "express": "^5.3.0",
+    "openai": "^7.55.0"
+  }
+}

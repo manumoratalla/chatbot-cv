@@ -1,0 +1,20 @@
+# Dependencias (se regeneran con npm install)
+node_modules/
+
+# Secretos
+.env
+.env.*
+!.env.example
+
+# Datos personales y el índice generado con ellos
+data/
+index/
+
+# Carpeta local de la CLI de Vercel
+.vercel/
+
+# Sistema operativo, editor y registros
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
